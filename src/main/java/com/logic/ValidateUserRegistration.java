@@ -26,9 +26,7 @@ public class ValidateUserRegistration {
 		}
 	}
 
-	public static int userNameValidation(String userName) {
-		return 1;
-	}
+	
 
 	public static int userMobileNumberValidation(String mobileNumber) throws Exception {
 		int result = 0;

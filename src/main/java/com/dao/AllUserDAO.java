@@ -4,12 +4,16 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.model.Items;
 
 public class AllUserDAO {
 
 	public static void allUsers() throws SQLException, ClassNotFoundException {
-
-		Connection connection;
+		
+	Connection connection;
 		PreparedStatement statement;
 		ResultSet rs;
 		connection = ConnectionUtil.databaseConnection();
@@ -24,5 +28,6 @@ public class AllUserDAO {
 		}
 
 	}
+	
 
 }

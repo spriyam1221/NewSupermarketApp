@@ -11,9 +11,9 @@ public class ItemsInsertion {
 	{
 		Connection connection=ConnectionUtil.databaseConnection();
 		PreparedStatement statement=null;
-		String query="insert into SuperMarket_items(category,items_name,brand_name,price)values(?,?,?,?)";
+		String query="insert into SuperMarket_items(section,items_name,brand_name,price)values(?,?,?,?)";
 		statement=connection.prepareStatement(query);
-		statement.setString(1, items.getCategory());
+		statement.setString(1, items.getSection());
 		statement.setString(2, items.getitemsName());
 		statement.setString(3, items.getBrandName());
 		statement.setInt(4, items.getPrice());

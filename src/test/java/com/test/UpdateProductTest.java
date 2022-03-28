@@ -10,19 +10,19 @@ public class UpdateProductTest {
 
 		@SuppressWarnings("resource")
 		Scanner sc=new Scanner(System.in);
-		System.out.println("1)Update by product  ");
-		System.out.println("2)Update by  product brand");
-		System.out.println("3)Update by product category");
+		System.out.println("1)Update by items  ");
+		System.out.println("2)Update by  items brand");
+		System.out.println("3)Update by items section");
 		int option=sc.nextInt();
 		if(option==1)
 		{
-			System.out.println("Enter product price");
+			System.out.println("Enter itemsprice");
 			int price =sc.nextInt();
-			System.out.println("Enter product name");
+			System.out.println("Enter items name");
 		@SuppressWarnings("resource")
 		Scanner sc1= new Scanner(System.in);
-		String ProductName =sc1.nextLine();
-		UpdateItemsDAO.itemsUpdateByitemName(price,ProductName);
+		String itemsName =sc1.nextLine();
+		UpdateItemsDAO.itemsUpdateByitemName(price,itemsName);
 		}
 		else if(option==2)
 		{
@@ -37,14 +37,14 @@ public class UpdateProductTest {
 		}
 		else if(option==3)
 		{
-			System.out.println("Enter  category price ");
+			System.out.println("Enter  section price ");
 			int price =sc.nextInt();
-			System.out.println("Enter  category name ");
+			System.out.println("Enter  section name ");
 			@SuppressWarnings("resource")
 			Scanner sc1= new Scanner(System.in);
-		String category =sc1.nextLine();
+		String section =sc1.nextLine();
 
-		UpdateItemsDAO.itemsUpdateBycategory(price,category);
+		UpdateItemsDAO.itemsUpdateBycategory(price,section);
 
 		}
 

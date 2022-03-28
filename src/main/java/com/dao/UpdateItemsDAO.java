@@ -10,7 +10,7 @@ public class UpdateItemsDAO {
 		Connection connection ;
         PreparedStatement statement;
 		connection = ConnectionUtil.databaseConnection();
-		String query =  "update  SuperMarket_items set price = ? where items_Name  = ? " ;
+		String query =  "update  SuperMarket_items set price = ? where items_name  = ? " ;
 		statement = connection.prepareStatement(query);
 		statement.setInt(1,price); 
 		statement.setString(2,itemsName);
@@ -32,17 +32,17 @@ public class UpdateItemsDAO {
 		System.out.println(" No of  brandName updated : "+rows);
 
 	}
-	public static void itemsUpdateBycategory(int price,String category) throws SQLException, ClassNotFoundException
+	public static void itemsUpdateBycategory(int price,String section) throws SQLException, ClassNotFoundException
 	{
 		Connection connection ;
         PreparedStatement statement;
 		connection = ConnectionUtil.databaseConnection();
-		String query =   "update SuperMarket_product set price = ? where category = ?" ;
+		String query =   "update SuperMarket_product set price = ? where section = ?" ;
 		statement = connection.prepareStatement(query);
 		statement.setInt(1,price);
-		statement.setString(2,category); 
+		statement.setString(2,section); 
 		int rows=statement.executeUpdate();
-		System.out.println(" No of  category updated : "+rows);
+		System.out.println(" No of  section updated : "+rows);
 
 
 }

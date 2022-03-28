@@ -13,8 +13,8 @@ public class ItemsInsertionTest {
 		
 		Scanner sc=new Scanner(System.in);
 		
-		System.out.println("Enter items category");
-		String category=sc.next();
+		System.out.println("Enter items section");
+		String section=sc.next();
 		System.out.println("Enter items name");
 		String itemsName=sc.next();
 		System.out.println("Enter items brand");
@@ -23,7 +23,7 @@ public class ItemsInsertionTest {
 		int price=sc.nextInt();
 		Items item=new Items();
 		
-		item.setCategory(category);
+		item.setSection(section);
 		item.setitemsName(itemsName);
 		item.setBrandName(brandName);
 		item.setPrice(price);

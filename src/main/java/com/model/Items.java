@@ -1,11 +1,14 @@
 package com.model;
 
+import java.sql.Date;
+
 public class Items {
 	private int id;
-	private String category;
+	private String section;
 	private String itemNames;
 	private static String brandName;
 	private int price;
+	
 
 	public int getId() {
 		return id;
@@ -15,12 +18,12 @@ public class Items {
 		this.id = id;
 	}
 
-	public String getCategory() {
-		return category;
+	public String getSection() {
+		return section;
 	}
 
-	public void setCategory(String category) {
-		this.category = category;
+	public void setSection(String section) {
+		this.section = section;
 	}
 
 	public String getitemsName() {
@@ -49,7 +52,17 @@ public class Items {
 
 	@Override
 	public String toString() {
-		return "Items [id=" + id + ", category=" + category + ", itemNames=" + itemNames + ", price=" + price + "]";
+		return "Items [id=" + id + ",section=" + section + ", itemNames=" + itemNames + ", price=" + price + "]";
+	}
+
+	public String getDate() {
+		
+		return null;
+	}
+
+	public void setDate(Date date) {
+		// TODO Auto-generated method stub
+		
 	}
 
 	

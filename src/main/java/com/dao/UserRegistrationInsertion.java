@@ -20,6 +20,7 @@ public class UserRegistrationInsertion {
 		statement.setString(4,registration.getMobileNumber());
 		int rows=statement.executeUpdate();		
 		System.out.println( "welcome to SuperMarket");
+		AllItemsDAO.allItems();
 	}
 
 }

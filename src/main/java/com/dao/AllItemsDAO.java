@@ -13,14 +13,17 @@ public class AllItemsDAO {
 		PreparedStatement statement;
 		ResultSet rs;
 		connection = ConnectionUtil.databaseConnection();
-		String query = "select name from Supermarket_App_User";
+		String query = "select items_name,price from SuperMarket_items";
 
 		statement = connection.prepareStatement(query);
 		rs = statement.executeQuery();
-		String name = null;
+		String itemsName = null;
+		Integer price=0;
 		while (rs.next()) {
-			name = rs.getString("name");
-			System.out.println(name);
+			itemsName = rs.getString("items_name");
+			price = rs.getInt("price");
+			System.out.println(itemsName);
+			System.out.println(price);
 		}
 
 	}

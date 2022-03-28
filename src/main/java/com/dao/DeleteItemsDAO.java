@@ -16,30 +16,29 @@ public class DeleteItemsDAO {
 		System.out.println("no of items deleted " + rows);
 
 	}
-
 	public static void itemsDeletionByBrandName(String brandName) throws SQLException, ClassNotFoundException {
 		Connection connection;
 		PreparedStatement statement;
 		connection = ConnectionUtil.databaseConnection();
 		String query = "delete from SuperMarket_items where brand_name = ?";
 		statement = connection.prepareStatement(query);
-		statement.setString(2, brandName);
+		statement.setString(1, brandName);
 		int rows = statement.executeUpdate();
 		System.out.println("no of brands deleted" + rows);
 
 	}
 
-	public static void itemsDeletionBycategory(String category) throws SQLException, ClassNotFoundException {
+	public static void itemsDeletionBysection(String section) throws SQLException, ClassNotFoundException {
 		Connection connection;
 		PreparedStatement statement;
 		connection = ConnectionUtil.databaseConnection();
-		String query = "delete from SuperMarket_items  where category = ?";
+		String query = "delete from SuperMarket_items  where section = ?";
 
 		statement = connection.prepareStatement(query);
-		statement.setString(3, category);
+		statement.setString(1,section);
 
 		int rows = statement.executeUpdate();
-		System.out.println("no of category deleted" + rows);
+		System.out.println("no of section deleted" + rows);
 
 	}
 
