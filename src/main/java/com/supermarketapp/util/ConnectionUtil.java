@@ -1,4 +1,4 @@
-package com.dao;
+package com.supermarketapp.util;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

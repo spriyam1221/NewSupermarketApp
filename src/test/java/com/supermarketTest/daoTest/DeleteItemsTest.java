@@ -1,9 +1,10 @@
-package com.test;
+package com.supermarketTest.daoTest;
 
 import java.sql.SQLException;
 import java.util.Scanner;
 
 import com.dao.DeleteItemsDAO;
+import com.supermarketapp.dao.ItemDAO;
 
 public class DeleteItemsTest {
 	public static void main(String[] args) throws ClassNotFoundException, SQLException
@@ -18,21 +19,21 @@ public class DeleteItemsTest {
 			System.out.println("Enter product name to delete");
 			Scanner sc1 = new Scanner(System.in);
 			String itemsName=sc1.nextLine();
-			DeleteItemsDAO.itemsDeletionByItemsName(itemsName);
+			ItemDAO.deletionByItemsName(itemsName);
 		}
 		else if(option==2)
 		{
 			System.out.println("Enter product brand to delete");
 			Scanner sc1 = new Scanner(System.in);
 			String brandName=sc1.nextLine();
-			DeleteItemsDAO.itemsDeletionByBrandName(brandName);
+			ItemDAO.deletionByBrandName(brandName);
 		}
 		else if(option==3)
 		{
 			System.out.println("Enter product section to delete");
 			Scanner sc1 = new Scanner(System.in);
 			String section=sc1.nextLine();
-			DeleteItemsDAO.itemsDeletionBysection(section);
+			ItemDAO.deletionBysection(section);
 		}
 
 	}

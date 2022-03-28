@@ -1,6 +1,6 @@
-package com.model;
+package com.supermarketapp.model;
 
-public class UserRegistration {
+public class User {
 	private String name;
 	private String email;
 	private String password;
@@ -40,7 +40,7 @@ public class UserRegistration {
 
 	@Override
 	public String toString() {
-		return "UserRegistration [name=" + name + ", email=" + email + ", password=" + password + ", mobileNumber="
+		return "User [name=" + name + ", email=" + email + ", password=" + password + ", mobileNumber="
 				+ mobileNumber + "]";
 	}
 

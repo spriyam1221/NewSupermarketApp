@@ -1,13 +1,13 @@
-package com.test;
+package com.supermarketTest.modelTest;
 
 import java.util.Scanner;
 
-import com.dao.AllItemsDAO;
-import com.dao.LoginDAO;
-import com.logic.ValidateUserRegistration;
-import com.model.UserRegistration;
 
-public class UserRegistrationTest {
+import com.supermarketapp.dao.AllItemsDAO;
+import com.supermarketapp.dao.UserDAO;
+import com.supermarketapp.model.User;
+
+public class UserTest {
 	public static void main(String[] args) throws Exception {
 	
 		Scanner sc = new Scanner(System.in);
@@ -24,14 +24,14 @@ public class UserRegistrationTest {
 		String mobileNumber = sc.next();
 		System.out.println("Enter your password");
 		String password = sc.next();
-		UserRegistration registration = new UserRegistration();
-		registration.setName(name);
-		registration.setEmail(email);
-		registration.setPassword(password);
-		registration.setMobileNumber(mobileNumber);
+		User user = new User();
+		user.setName(name);
+		user.setEmail(email);
+		user.setPassword(password);
+		user.setMobileNumber(mobileNumber);
 		try {
 
-			ValidateUserRegistration.validatingRegistration(registration);
+			UserDAO.regiatration(user);
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 		}
@@ -42,7 +42,7 @@ if(num==2) {
 	String email=sc.next();
 	System.out.println("Enter your password");
 	String password=sc.next();
-	LoginDAO.loginValidation(email, password);
+	UserDAO.login(email, password);
 	
 }
 	}

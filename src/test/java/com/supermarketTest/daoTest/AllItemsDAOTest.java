@@ -1,8 +1,8 @@
-package com.test;
+package com.supermarketTest.daoTest;
 
 import java.sql.SQLException;
 
-import com.dao.AllItemsDAO;
+import com.supermarketapp.dao.AllItemsDAO;
 
 public class AllItemsDAOTest {
 	public static void main(String[] args) throws ClassNotFoundException, SQLException {

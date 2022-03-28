@@ -1,17 +1,18 @@
-package com.logic;
+package com.supermarketapp.validation;
 
-import com.dao.UserRegistrationInsertion;
-import com.model.UserRegistration;
 
-public class ValidateUserRegistration {
-	public static void validatingRegistration(UserRegistration registration) throws Exception {
-		int NameValid = nameValidation(registration.getName());
-		int EmailValid = userEmailValidation(registration.getEmail());
-		int PasswordValid = userPasswordValidation(registration.getPassword());
-		int MobileNumberValid = userMobileNumberValidation(registration.getMobileNumber());
+import com.supermarketapp.dao.UserDAO;
+import com.supermarketapp.model.User;
+
+public class ValidateUser {
+	public  void validatingRegistration(User user) throws Exception {
+		int NameValid = nameValidation(user.getName());
+		int EmailValid = userEmailValidation(user.getEmail());
+		int PasswordValid = userPasswordValidation(user.getPassword());
+		int MobileNumberValid = userMobileNumberValidation(user.getMobileNumber());
                 if (NameValid+ EmailValid + PasswordValid+ MobileNumberValid == 4) {
 		
-                	UserRegistrationInsertion.insertUser(registration);
+                	UserDAO.regiatration(user);
 
 		} else {
 			throw new Exception("Please Re-Enter Your Details");

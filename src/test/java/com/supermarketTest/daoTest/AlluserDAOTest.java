@@ -1,14 +1,15 @@
-package com.test;
+package com.supermarketTest.daoTest;
 
 import java.sql.SQLException;
 
-import com.dao.AllUserDAO;
+import com.supermarketapp.dao.AllUserDAO;
+import com.supermarketapp.dao.UserDAO;
 
 
 public class AlluserDAOTest {
 	public static void main(String[] args) throws ClassNotFoundException, SQLException {
 
-		AllUserDAO.allUsers();
+		UserDAO.allUsers();
 
 	}
 }

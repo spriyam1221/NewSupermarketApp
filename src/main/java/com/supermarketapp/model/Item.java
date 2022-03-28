@@ -1,8 +1,8 @@
-package com.model;
+package com.supermarketapp.model;
 
 import java.sql.Date;
 
-public class Items {
+public class Item {
 	private int id;
 	private String section;
 	private String itemNames;
@@ -53,16 +53,6 @@ public class Items {
 	@Override
 	public String toString() {
 		return "Items [id=" + id + ",section=" + section + ", itemNames=" + itemNames + ", price=" + price + "]";
-	}
-
-	public String getDate() {
-		
-		return null;
-	}
-
-	public void setDate(Date date) {
-		// TODO Auto-generated method stub
-		
 	}
 
 	

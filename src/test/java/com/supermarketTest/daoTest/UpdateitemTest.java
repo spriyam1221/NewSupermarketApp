@@ -1,11 +1,13 @@
-package com.test;
+package com.supermarketTest.daoTest;
 
 import java.sql.SQLException;
+
 import java.util.Scanner;
 
-import com.dao.UpdateItemsDAO;
+import com.supermarketapp.dao.ItemDAO;
 
-public class UpdateProductTest {
+
+public class UpdateitemTest {
 	public static void main(String[] args) throws ClassNotFoundException, SQLException {
 
 		@SuppressWarnings("resource")
@@ -22,7 +24,7 @@ public class UpdateProductTest {
 		@SuppressWarnings("resource")
 		Scanner sc1= new Scanner(System.in);
 		String itemsName =sc1.nextLine();
-		UpdateItemsDAO.itemsUpdateByitemName(price,itemsName);
+		ItemDAO.updateByitemName(price,itemsName);
 		}
 		else if(option==2)
 		{
@@ -32,7 +34,7 @@ public class UpdateProductTest {
 			@SuppressWarnings("resource")
 			Scanner sc1= new Scanner(System.in);
 		String brandName =sc1.nextLine();
-		UpdateItemsDAO.itemsUpdateByBrandName(price,brandName);
+		ItemDAO.updateByBrandName(price,brandName);
 
 		}
 		else if(option==3)
@@ -44,7 +46,7 @@ public class UpdateProductTest {
 			Scanner sc1= new Scanner(System.in);
 		String section =sc1.nextLine();
 
-		UpdateItemsDAO.itemsUpdateBycategory(price,section);
+		ItemDAO.updateBysection(price,section);
 
 		}
 

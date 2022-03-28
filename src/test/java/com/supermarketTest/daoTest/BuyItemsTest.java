@@ -1,6 +1,6 @@
-package com.test;
+package com.supermarketTest.daoTest;
 
-import com.logic.BuyItems;
+import com.supermarketapp.validation.BuyItems;
 
 public class BuyItemsTest {
 	

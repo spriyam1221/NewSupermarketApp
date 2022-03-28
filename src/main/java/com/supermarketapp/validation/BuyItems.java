@@ -1,13 +1,13 @@
-package com.logic;
+package com.supermarketapp.validation;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import com.dao.ConnectionUtil;
-import com.dao.ListAllItems;
-import com.model.Items;
+import com.supermarketapp.dao.ItemDAO;
+import com.supermarketapp.model.Item;
+import com.supermarketapp.util.ConnectionUtil;
 
 public class BuyItems {
 	static Scanner sc=new Scanner(System.in);
@@ -15,8 +15,8 @@ public class BuyItems {
 	public static void allitems() throws Exception
 	{
 		totalItems=new ArrayList<Integer>();
-		List<Items> prod=ListAllItems.allitems();
-		for(Items items:prod)
+		List<Item> prod=ItemDAO.allitems();
+		for(Item items:prod)
 		{
 			System.out.println(items.getId()+"  "+items.getSection()+"  "+items.getitemsName()+"  "+items.getBrandName()+"  "+items.getPrice());
 		}
@@ -121,6 +121,9 @@ public class BuyItems {
 		int n1=sc.nextInt();
 		System.out.println("Enter amount");
 		int amount=sc.nextInt();
+		
+		
+		System.out.println(amount +"---"+ total);
 		if(amount<total || amount>total)
 		{
 			System.out.println("please enter only requird amount");
