@@ -74,7 +74,7 @@ public class ValidateUser {
 	}
 
 	public static int userPasswordValidation(String password) throws Exception {
-		if (password.length() < 8 && password.length() < 16){
+		if (password.length() < 8 ){
 			throw new Exception("Password must be 8 or 16 characters long");
 		} else {
 			return 1;

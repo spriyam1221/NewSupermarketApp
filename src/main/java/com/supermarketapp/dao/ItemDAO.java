@@ -8,10 +8,14 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import com.supermarketapp.model.Item;
 import com.supermarketapp.util.ConnectionUtil;
 
 public class ItemDAO {
+	private static Logger log = LogManager.getLogger( UserDAO.class);
 	public static List<Item> allitems() throws SQLException, ClassNotFoundException {
 		List<Item> item = new ArrayList<Item>();
 		Connection connection = ConnectionUtil.databaseConnection();
@@ -57,6 +61,7 @@ public class ItemDAO {
 		statement.setInt(4, items.getPrice());
 		int rows=statement.executeUpdate();		
 		System.out.println("Items are inserted");
+		log.info("Items are inserted");
 	}
 	public static void updateByitemName(int price, String itemsName) throws SQLException, ClassNotFoundException
 	{
@@ -70,6 +75,7 @@ public class ItemDAO {
 
 		int rows=statement.executeUpdate();
 		System.out.println(" No of rows product updated : "+rows);
+		log.debug(" No of rows product updated : "+rows);
 	}
 	public static void updateByBrandName(int price,String brandName) throws SQLException, ClassNotFoundException
 	{
@@ -83,7 +89,7 @@ public class ItemDAO {
 
 		int rows=statement.executeUpdate();
 		System.out.println(" No of  brandName updated : "+rows);
-
+		log.debug(" No of  brandName updated : "+rows);
 	}
 	public static void updateBysection(int price,String section) throws SQLException, ClassNotFoundException
 	{
@@ -96,6 +102,7 @@ public class ItemDAO {
 		statement.setString(2,section); 
 		int rows=statement.executeUpdate();
 		System.out.println(" No of  section updated : "+rows);
+		log.debug(" No of  section updated : "+rows);
 
 
 }
@@ -108,6 +115,7 @@ public class ItemDAO {
 		statement.setString(1, itemsName);
 		int rows = statement.executeUpdate();
 		System.out.println("no of items deleted " + rows);
+		log.debug("no of items deleted " + rows);
 
 	}
 	public static void deletionByBrandName(String brandName) throws SQLException, ClassNotFoundException {
@@ -119,6 +127,7 @@ public class ItemDAO {
 		statement.setString(1, brandName);
 		int rows = statement.executeUpdate();
 		System.out.println("no of brands deleted" + rows);
+		log.debug("no of brands deleted" + rows);
 
 	}
 
@@ -133,7 +142,7 @@ public class ItemDAO {
 
 		int rows = statement.executeUpdate();
 		System.out.println("no of section deleted" + rows);
-
+		log.debug("no of section deleted" + rows);
 	}
 
 

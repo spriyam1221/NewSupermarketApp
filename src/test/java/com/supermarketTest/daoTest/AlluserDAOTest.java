@@ -2,7 +2,8 @@ package com.supermarketTest.daoTest;
 
 import java.sql.SQLException;
 
-import com.supermarketapp.dao.AllUserDAO;
+
+//import com.supermarketapp.dao.AllUserDAO;
 import com.supermarketapp.dao.UserDAO;
 
 
