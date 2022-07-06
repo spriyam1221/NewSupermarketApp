@@ -1,46 +1,61 @@
 # NewSupermarketApp
 
-
-## Project Description
-
-Here goes your awesome project description!
-
+ It is an application which is useful for buying different kinds of product such as vegetables, fruits, etc.
+ 
 ## Technologies Used
 
-* Tech 1 - version 1.0
-* Tech 2 - version 2.0
-* Tech 3 - version 3.0
+* Java
+* Maven
+* MYSQL
+* Git
 
 ## Features
 
-List of features ready and TODOs for future development
-* Awesome feature 1
-* Awesome feature 2
-* Awesome feature 3
+Module1:Homepage
+      *Home page for displaying(completed)
 
-To-do list:
-* Wow improvement to be done 1
-* Wow improvement to be done 2
+ Module2:user
+      *user Registration(completed)
+      *user Login(completed)
 
-## Getting Started
-   
-(include git clone command)
-(include all environment setup steps)
+ Module3:Crud Operations
+      *Insert all items(completed)
+      *Update by brandname(completed)
+      *Update by itemname(completed)
+      *Update by price(completed)
+      *Delete by brandname(completed)
+      *Delete by itemname(completed)
+      *Delete by price(completed)
 
-> Be sure to include BOTH Windows and Unix command  
-> Be sure to mention if the commands only work on a specific platform (eg. AWS, GCP)
+ Module4:View
+      *User can view all items(completed)
+      
+ Module5:order
+     *user can order the items(completed)
 
-- All the `code` required to get started
-- Images of what it should look like
+ Module6:payment
+      *user can see amount details(completed)
+      *user can see payment modes(Completed)
+      *user can pay the money and get the product(Completed).
 
-## Usage
+Getting Started:
 
-> Here, you instruct other people on how to use your project after they’ve installed it. This would also be a good place to include screenshots of your project in action.
+In windows command prompt >> git clone 
 
-## Contributors
+Imported the project as existing maven project in Eclipse tool.
 
-> Here list the people who have contributed to this project. (ignore this section, if its a solo project)
+Added mysql-java-connector dependency in pom.xml file.
 
-## License
+To run this project, install git, we can clone this repository in our windows local machine.
 
-This project uses the following license: [<license_name>](<link>).
+Install Apache Maven 3.8.5
+
+Install Java version 17
+
+Click on project in eclipse tool, Run as maven install.
+
+The jar built for this project will be in target folder.
+
+In windows command prompt >> mvn -jar jarname or we can run in eclipse.
+
+Contributor Shanmugapriya.M
